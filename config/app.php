@@ -153,6 +153,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Livewire\LivewireServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
 
         /*

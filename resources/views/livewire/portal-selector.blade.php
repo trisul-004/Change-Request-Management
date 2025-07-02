@@ -48,6 +48,9 @@
                 @if($selectedPortalDetails->ip_address)
                     <p class="text-sm text-gray-600">IP: {{ $selectedPortalDetails->ip_address }}</p>
                 @endif
+                @if($selectedPortalDetails->managed_by)
+                    <p class="text-sm text-gray-600">Managed By: {{ $selectedPortalDetails->managed_by }}</p>
+                @endif
                 @if($selectedPortalDetails->description)
                     <p class="text-sm text-gray-500 mt-2">{{ $selectedPortalDetails->description }}</p>
                 @endif

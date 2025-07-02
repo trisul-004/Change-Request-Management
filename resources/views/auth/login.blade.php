@@ -17,8 +17,9 @@
             <div class="flex justify-center mb-4">
                 <img src="/images/ongc-logo.png" alt="ONGC Logo" class="h-20 w-auto">
             </div>
-            <div>
-                <h2 class="mt-2 text-center text-3xl font-extrabold text-gray-900">
+            <div class="text-center mb-4">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Change Management Portal</h1>
+                <h2 class="mt-2 text-center text-3xl text-gray-900">
                     Sign in to your account
                 </h2>
             </div>

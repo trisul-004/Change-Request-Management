@@ -40,6 +40,8 @@ class PortalResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->default('active'),
+                Forms\Components\TextInput::make('managed_by')
+                    ->maxLength(255),
             ]);
     }
 
@@ -61,11 +63,17 @@ class PortalResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('status')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('managed_by')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

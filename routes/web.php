@@ -35,6 +35,11 @@ Route::middleware('auth')->group(function () {
         ];
     });
     
+    // Team Management Routes
+    Route::get('/team', [TeamController::class, 'index'])->name('team.index');
+    Route::post('/team/assign', [TeamController::class, 'addDeveloper'])->name('team.assign');
+    Route::delete('/team/{teamAssignment}', [TeamController::class, 'removeDeveloper'])->name('team.remove');
+
     // Dashboard Routes
     Route::get('/dashboard', function () {
         $user = auth()->user();
@@ -214,7 +219,7 @@ Route::middleware('auth')->group(function () {
         // Team management routes
         Route::get('/team', [TeamController::class, 'index'])->name('team.index');
         Route::post('/team/assign', [TeamController::class, 'assignDeveloper'])->name('team.assign');
-        Route::delete('/team/{teamAssignment}', [TeamController::class, 'removeDeveloper'])->name('team.remove');
+        Route::delete('/team/{developer}', [TeamController::class, 'removeDeveloper'])->name('team.remove');
         
         // Route for supervisors to view developer work progress
         Route::get('/change-requests/{changeRequest}/progress', function(ChangeRequest $changeRequest) {

@@ -45,6 +45,10 @@
                     </div>
 
                     <div>
+                        <label class="block text-sm font-medium text-gray-700">Portal</label>
+                        <p class="text-sm text-gray-900">{{ $changeRequest->portal->name }}</p>
+                    </div>
+                    <div>
                         <label class="block text-sm font-medium text-gray-700">Client</label>
                         <p class="text-sm text-gray-900">{{ $changeRequest->client->name }}</p>
                     </div>

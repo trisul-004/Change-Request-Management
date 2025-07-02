@@ -33,6 +33,11 @@
     </main>
 
     @livewireScripts
+    <script>
+        window.livewire = window.livewire || {};
+        window.livewire.app = window.livewire.app || new Livewire.Application();
+        window.livewire.app.initialize();
+    </script>
     @stack('scripts')
 </body>
 </html> 
